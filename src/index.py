@@ -79,6 +79,7 @@ decodedObjects = pyzbar.decode(im)
 for obj in decodedObjects:
     print(obj.data)
     webbrowser.open(obj.data)
+    time.sleep(1)
     # 화면 최대화
     pyautogui.keyDown('altleft')
     pyautogui.keyDown('space')
@@ -113,6 +114,7 @@ for i in range(3):
         pyautogui.keyDown('w')
         pyautogui.keyUp('ctrlleft')
         pyautogui.keyUp('w')
-        time.sleep(3)
+        time.sleep(1)
         pyautogui.click(x=1400, y=500)
         print('로아 실행 완료')
+print('숫자 인식은 잘 못할수도 있으니 확인 부탁합니당!')
